@@ -7,7 +7,7 @@ def init_embedding(embeddings):
     :param embeddings: embedding tensor
     """
     bias = np.sqrt(3.0 / embeddings.size(1))
-    torch.nn.init.uniform_(embeddings, -bias, bias)
+    torch.nn.init.uniform_(embeddings, -bias, bias)   #torch.nn.init.uniform_(tensor, a=0, b=1) 使tensor服从~U(a,b)均匀分布
 
 def load_embeddings(emb_file, word_map):
     """
